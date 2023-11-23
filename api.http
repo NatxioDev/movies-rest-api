@@ -1,0 +1,33 @@
+### Recuperar todas las peliculas
+GET http://localhost:3000/movies
+
+
+### Recuperar una pelicula
+GET http://localhost:3000/movies/a4ad4211-9c83-46fd-ab31-0fce9dc3e6f7
+
+### Recuperar todas las peliculas de un genero
+GET http://localhost:3000/movies?genre=ScI-Fi
+
+
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "sql": "Select * from movies",
+    "title": "The Matrix",
+    "year": 1999,
+    "director": "Lana Wachowski",
+    "duration": 136,
+    "poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
+    "genre": ["Sci-Fi"]
+}
+
+###
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 2023,
+    "director": "Lana Wachowski"
+}
