@@ -1,5 +1,5 @@
 const express = require('express')
-const pc = require('picocolors')
+
 const movies = require('./movies.json')
 const crypto = require('node:crypto')
 const z = require('zod')
